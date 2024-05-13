@@ -11,7 +11,11 @@ https://unix.stackexchange.com/questions/113975/configure-gsm-connection-using-n
 https://askubuntu.com/questions/740584/enabling-serial-network-devices-with-modemmanager/740585
 
 ### mmcli
+useful commands:
+```
 
+systemctl restart ModemManager
+```
 
 ### nmcli
 start new connection named wwan:
