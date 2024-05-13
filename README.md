@@ -13,7 +13,45 @@ https://askubuntu.com/questions/740584/enabling-serial-network-devices-with-mode
 ### mmcli
 useful commands:
 ```
+#list available modems
+mmcli -L
 
+#print status of modem 0
+mmcli -m 0
+
+#get location status
+mmcli -m 0 --location-status
+
+#location options
+#selection of modem must always be before location options flags, as follows:
+
+mmcli -m 0
+
+Location options:
+  --location-status                                              Show status of location gathering.
+  --location-get                                                 Get all available location information.
+  --location-monitor                                             Monitor all available location information.
+  --location-enable-3gpp                                         Enable 3GPP location gathering.
+  --location-disable-3gpp                                        Disable 3GPP location gathering.
+  --location-enable-agps-msa                                     Enable MSA A-GPS location gathering.
+  --location-disable-agps-msa                                    Disable MSA A-GPS location gathering.
+  --location-enable-agps-msb                                     Enable MSB A-GPS location gathering.
+  --location-disable-agps-msb                                    Disable MSB A-GPS location gathering.
+  --location-enable-gps-nmea                                     Enable NMEA-based GPS location gathering.
+  --location-disable-gps-nmea                                    Disable NMEA-based GPS location gathering.
+  --location-enable-gps-raw                                      Enable raw GPS location gathering.
+  --location-disable-gps-raw                                     Disable raw GPS location gathering.
+  --location-enable-cdma-bs                                      Enable CDMA base station location gathering.
+  --location-disable-cdma-bs                                     Disable CDMA base station location gathering.
+  --location-enable-gps-unmanaged                                Enable unmanaged GPS location gathering.
+  --location-disable-gps-unmanaged                               Disable unmanaged GPS location gathering.
+  --location-set-supl-server=[IP:PORT] or [FQDN:PORT]            Set SUPL server address
+  --location-inject-assistance-data=[PATH]                       Inject assistance data in the GNSS module
+  --location-set-gps-refresh-rate=[RATE]                         Set GPS refresh rate in seconds, or 0 disable the explicit rate.
+  --location-set-enable-signal                                   Enable location update signaling in DBus property.
+  --location-set-disable-signal                                  Disable location update signaling in DBus property.
+
+#restart ModemManager
 systemctl restart ModemManager
 ```
 
