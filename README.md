@@ -108,3 +108,7 @@ https://swairlearn.bluecover.pt/nmea_analyser
 
 ## Open Database of Cell Towers
 https://opencellid.org
+
+## Composite USB Gadgets on the Raspberry Pi Zero
+https://hackaday.com/2016/02/25/giving-the-pi-zero-usb-ethernet-and-serial-over-usb/
+https://www.isticktoit.net/?p=1383
